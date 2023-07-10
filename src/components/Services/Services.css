@@ -1,0 +1,50 @@
+.service{
+    justify-content: space-evenly;
+}
+.service-info{
+    width: 50%;
+}
+.service-img{
+    width: 20rem
+}
+.service-content{
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    border-left: solid var(--color-white) 2px;
+    line-height: 1.2rem;
+}
+.service-header{
+    font-size: 1.5rem;
+}
+.service:nth-of-type(even) .service-content{
+    border-left: none;
+    text-align: right;
+    border-right: solid var(--color-white) 2px;
+}
+.service:nth-of-type(even) .service-header{
+    text-align: right;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .service-info{
+        width: 100%;
+    }
+    .service:nth-of-type(odd) .service-info{
+        order: 2;
+    }
+    .service:nth-of-type(even) .service-content {
+        text-align: left;
+        border-left: solid var(--color-white) 2px;
+        border-right: none;
+    }
+    .service:nth-of-type(even) .service-header {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .service-img {
+        width: 100%;
+    }
+}

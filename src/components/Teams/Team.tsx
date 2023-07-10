@@ -1,6 +1,6 @@
 import "./Team.css";
 import { AiFillHtml5 } from "react-icons/ai";
-import freelancer from "../../assets/images/freelancer.png";
+import logo from "../../assets/images/logo.png";
 import founder from "../../assets/images/founder.jpeg";
 import {
 	BiLogoJava,
@@ -14,7 +14,7 @@ import { FaLaravel } from "react-icons/fa";
 const Team = () => {
 	let arr = [1, 2, 3, 4];
 	return (
-		<section className="container team text-center">
+		<section id="team" className="container team text-center">
 			<h2>Meet Our Team</h2>
 			<div className="card founder">
 				<div className="hexagon">
@@ -29,7 +29,7 @@ const Team = () => {
 						<div className="hexagon">
 							<img
 								className="profile-img"
-								src={freelancer}
+								src={logo}
 								alt="Team Member"
 							/>
 							<div className="languages d-grid">
