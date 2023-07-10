@@ -1,0 +1,20 @@
+.contact-info{
+    justify-content: space-between;
+}
+.info-content{
+    padding: 1.2rem 0;
+    margin: 0 1rem;
+}
+.info-content-header{
+    padding-bottom: 0.5rem;
+}
+.icon{
+    font-size: 1.4rem;
+    position: absolute;
+}
+.icon-header{
+    font-size: 1.2rem;
+}
+.pl-2{
+    padding-left: 2rem;
+}

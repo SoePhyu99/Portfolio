@@ -33,28 +33,28 @@ const Team = () => {
 								alt="Team Member"
 							/>
 							<div className="languages d-grid">
-								<div className="p-1">
+								<div>
 									<AiFillHtml5 />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiSolidFileCss />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiLogoJavascript />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiLogoTypescript />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiLogoJava />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiLogoReact />
 								</div>
-								<div className="p-1">
+								<div>
 									<BiLogoPhp />
 								</div>
-								<div className="p-1">
+								<div>
 									<FaLaravel />
 								</div>
 							</div>

@@ -16,6 +16,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+header{
+    font-weight: bold;
+}
 ul{
     list-style: none;
 }
@@ -41,6 +44,9 @@ a{
 }
 .container{
     padding: 1rem 4rem;
+}
+.text-left{
+    text-align: left;
 }
 .text-center{
     text-align: center;
