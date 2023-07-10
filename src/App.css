@@ -1,0 +1,53 @@
+@font-face {
+    font-family: abeezee;
+    src: url('./assets/fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+:root{
+    --color-black: #000;
+    --color-white: #fff;
+    --transition: all ease 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'abeezee';
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.d-grid{
+    display: grid;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.d-inline{
+    display: inline-block;
+}
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
+}
+.container{
+    padding: 1rem 4rem;
+}
+.text-center{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        padding: 1rem;
+    }
+}

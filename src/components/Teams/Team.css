@@ -1,0 +1,75 @@
+.hexagon{
+    position: relative;
+    --hexagon-size: 10rem;
+    --hexagon-size-1: 11rem;
+    --hexagon-size-2: 12rem;
+    width: var(--hexagon-size);
+    height: var(--hexagon-size-1);
+    background-color: #e0e0e0;
+    margin: 1rem auto;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.founder .hexagon {
+    width: var(--hexagon-size-1);
+    height: var(--hexagon-size-2);
+}
+.profile-img{
+    width: 100%;
+    height: 100%;
+}
+.languages{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000a1;
+    color: var(--color-white);
+    font-size: 1.3rem;
+    grid-template-columns: auto auto auto;
+    height: 100%;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.hexagon:hover > .languages{
+    padding: 1rem;
+    padding-top: 2.5rem;
+    max-height: 100vh;
+}
+.member{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card{
+    margin: auto;
+    padding: 1rem 0;
+}
+.card-header{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .member{
+        grid-template-columns: auto auto;
+    }
+    .member .hexagon{
+        width: var(--hexagon-size-1);
+        height: var(--hexagon-size-2);
+    }
+}
+@media screen and (max-width: 700px) {
+    .member{
+        grid-template-columns: auto;
+    }
+    .founder .hexagon {
+        width: var(--hexagon-size-1);
+        height: var(--hexagon-size-2);
+    }
+}
+@media screen and (max-width: 380px) {
+    .hexagon{
+        width: 100%;
+        height: auto;
+    }
+}
