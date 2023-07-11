@@ -1,0 +1,29 @@
+.about{
+    background-color: aliceblue;
+}
+.head{
+    font-size: 2rem;
+}
+.about-content{
+    line-height: 2rem;
+}
+
+/* about assist */
+.assist-items {
+    font-size: 1.2rem;
+}
+
+.tool img {
+    width: 20px;
+    margin-right: 0.7rem;
+}
+
+@media screen and (max-width: 600px){
+    .about-content{
+        text-align: center;
+    }
+    .assist-lists{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -18,7 +18,7 @@ const Team = () => {
 			<h2>Meet Our Team</h2>
 			<div className="card founder">
 				<div className="hexagon">
-					<img src={founder} alt="" className="profile-img" />
+					<img src={logo} alt="" className="profile-img" />
 				</div>
 				<header className="card-header">Name(Founder)</header>
 				<p className="card-content">Lorem ipsum dolor sit amet.</p>

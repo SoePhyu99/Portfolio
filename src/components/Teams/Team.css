@@ -9,6 +9,10 @@
     margin: 1rem auto;
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
+.team{
+
+    background-color: aliceblue;
+}
 .founder .hexagon {
     width: var(--hexagon-size-1);
     height: var(--hexagon-size-2);

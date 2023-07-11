@@ -1,0 +1,67 @@
+.footer{
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+.footer a{
+    color: var(--color-white);
+}
+.footer-content{
+    grid-template-areas: 'footer-logo quick-link company adress';
+    grid-auto-columns: 1fr;
+}
+@media screen and (max-width: 600px) {
+    .footer-content {
+        grid-template-areas: 'footer-logo footer-logo' 'quick-link company' 'adress adress';
+    }
+}
+.footer-content>div{
+    padding: 0.5rem;
+}
+
+/* Footer logo */
+.footer-logo{
+    grid-area: footer-logo;
+}
+.footer-brand{
+    font-size: 1.3rem;
+    color: var(--color-black);
+}
+.socials{
+    margin: 0.5rem 0 0;
+}
+.social-link{
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+/* Quick link */
+.quick-link{
+    grid-area: quick-link;
+}
+
+/* Company */
+.company{
+    grid-area: company;
+}
+
+/* Adress */
+.adress{
+    grid-area: adress;
+}
+
+/* footer link */
+.footer-links{
+    padding-top: 0.3rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+.footer-link{
+    text-decoration: underline;
+}
+
+/* footer base */
+.footer-base{
+    /* border-top: solid gainsboro 1px; */
+    margin-top: 1rem;
+    padding-top: 1rem;
+}

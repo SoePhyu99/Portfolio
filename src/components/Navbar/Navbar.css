@@ -1,33 +1,11 @@
-.navbar{
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--color-white);
-    /* box-shadow: 1px 1px 5px #7c7a7a; */
-}
-.nav-brand{
-    padding: 1rem 1rem 0;
-}
 .nav-brand .logo{
     width: 80px;
-}
-.nav-item{
-    padding: 0 1rem;
-}
-.nav-link{
-    color: (var(--color-black));
 }
 .nav-link-active{
     border-bottom: solid black 2px;
 }
 
 @media screen and (max-width: 700px) {
-    .navbar{
-        justify-content: space-between;
-        padding: 0 1rem;
-    }
-    .nav-brand{
-        padding-left: 0;
-    }
     .nav-brand .logo{
         width: 70px;
     }
@@ -38,7 +16,6 @@
         background: none;
         font-size: 1.3rem;
         z-index: 1;
-        cursor: pointer;
     }
     .nav-items{
         position: absolute;

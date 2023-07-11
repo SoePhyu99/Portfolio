@@ -5,18 +5,14 @@
 /* header */
 .header{
     grid-area: header;
-    margin-bottom: 1rem;
 }
 
 /* content info */
 .info{
     grid-area: info;
-    justify-content: space-between;
-    margin: 1rem 0;
 }
 .info-content {
     padding: 1.2rem 0;
-    margin: 0 1rem;
 }
 
 .info-content-header {
@@ -35,19 +31,17 @@
 /* content form */
 .form{
     grid-area: form;
-    box-shadow: 1px 1px 5px gray;
+    border: solid #c7c5c5 1px;
+    border-right: none;
     padding: 2rem;
-    border-radius: 5px;
 }
 .form-header{
-    margin: 1rem 0 2rem;
     font-size: 1.3rem;
 }
 .form-label{
     font-size: 1rem;
 }
 .form-input{
-    display: block;
     width: 100%;
     margin: 0.5rem 0 1rem;
     padding: 0.8rem;
@@ -80,20 +74,29 @@
 
 @media screen and (max-width:900px) {
     .contact{
+        padding: 2rem 0 0;
         grid-template-areas: 'header header' 'info form' 'map map';
     }
+    .info{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        padding-left: 2rem;
+    }
     .form{
-        margin-bottom: 1rem;
+        margin: 0 1rem 1rem;
+        padding: 1rem;
+        border: none;
     }
     .map{
         height: 30rem;
+    }
+    .map-frame{
+        height: 132%;
     }
 }
 @media screen and (max-width: 700px) {
     .contact {
         grid-template-areas: 'header' 'info' 'form' 'map';
-    }
-    .info-content{
-        margin: 0;
     }
 }

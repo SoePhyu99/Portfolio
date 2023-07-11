@@ -1,8 +1,8 @@
 .service{
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .service-info{
-    width: 50%;
+    width: 65%;
 }
 .service-img{
     width: 20rem
@@ -10,7 +10,7 @@
 .service-content{
     margin: 1rem 0;
     padding: 0 0.5rem;
-    border-left: solid var(--color-white) 2px;
+    border-left: solid var(--color-black) 2px;
     line-height: 1.2rem;
 }
 .service-header{
@@ -19,14 +19,20 @@
 .service:nth-of-type(even) .service-content{
     border-left: none;
     text-align: right;
-    border-right: solid var(--color-white) 2px;
+    border-right: solid var(--color-black) 2px;
 }
 .service:nth-of-type(even) .service-header{
     text-align: right;
 }
-
+@media screen and (max-width: 1080px) {
+    .service-info{
+        width: 50%;
+    }
+}
 @media screen and (max-width: 700px) {
-    
+    .service{
+        justify-content: center;
+    }
     .service-info{
         width: 100%;
     }
@@ -35,7 +41,7 @@
     }
     .service:nth-of-type(even) .service-content {
         text-align: left;
-        border-left: solid var(--color-white) 2px;
+        border-left: solid var(--color-black) 2px;
         border-right: none;
     }
     .service:nth-of-type(even) .service-header {

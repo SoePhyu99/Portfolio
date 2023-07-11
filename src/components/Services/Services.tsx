@@ -5,7 +5,7 @@ import uiux from "../../assets/images/uiux.png";
 
 const Services = () => {
 	return (
-		<section id="services" className="container dark-container services">
+		<section id="services" className="container services">
 			<h2 className="text-center">Services We Provided</h2>
 			<div className="service d-flex">
 				<div className="pt-2 service-info">
