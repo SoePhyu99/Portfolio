@@ -1,66 +1,50 @@
+import { socials } from "../Tools/socials";
 import "./About.css";
-import { FiCornerRightDown } from "react-icons/fi";
-import html from "../../assets/images/html-5.png";
-import css from "../../assets/images/css-3.png";
-import js from "../../assets/images/js.png";
-import ts from "../../assets/images/typescript.png";
-import java from "../../assets/images/java.png";
-import react from "../../assets/images/science.png";
-import php from "../../assets/images/php.png";
-import bootstrap from "../../assets/images/bootstrap.png";
-
 const About = () => {
-	const tools = [html, css, js, ts, bootstrap, java, react, php];
 	return (
-		<section id="about" className="about container">
-			<h2 className="mb-1 text-center">What We Are</h2>
-			<div className="mt-1 mb-1">
-				<div className="about-content mb-2 text-left">
-					<p className="mb-1">
-						<span className="head">Lorem</span> ipsum dolor sit,
-						amet consectetur adipisicing elit. At saepe provident,
-						asperiores vero esse veniam voluptatem laborum ullam
-						totam cupiditate reiciendis, velit, numquam fugiat
-						dolores praesentium libero quasi consequatur sed. Lorem
-						ipsum dolor sit amet, consectetur adipisicing elit.
-						Soluta, est? Rem et minus laboriosam magni repellendus
-						esse quis eaque facere ex quasi! Eos exercitationem quis
-						fuga alias. Distinctio, dolor obcaecati?
+		<section id="about">
+			<div className="about d-grid">
+				<div className="about-content bg-primary container text-left">
+					<div className="section-header">
+						<p className="section-header-content color-secondary">
+							Empowering Digital Success.
+						</p>
+						<header className="section-header-title color-heading">
+							About Us
+						</header>
+					</div>
+					<p className="about-description font-lg">
+						At Varoon Valley, we are passionate about leveraging
+						technology to drive innovation and empower businesses.
+						With a team of skilled professionals and a commitment to
+						excellence, we specialize in developing cutting-edge
+						software solutions that address our clients' unique
+						needs. Our mission is to deliver exceptional software
+						products and services that help businesses thrive in the
+						digital age. With a focus on collaboration, integrity,
+						and customer satisfaction, we are dedicated to making a
+						positive impact through our expertise and technological
+						solutions.
 					</p>
-				</div>
-				<div className="about-assist">
-					<ul className="assist-lists text-center d-flex space-between">
-						<li className="assist-items mb-1">
-							<header className="assist-header mb-1">
-								Years of Experiences
-							</header>
-							<p className="mt-1">3+</p>
-						</li>
-						<li className="assist-items mb-1">
-							<header className="assist-header mb-1">
-								Projects
-							</header>
-							<p className="mt-1">10</p>
-						</li>
-						<li className="assist-items mb-1">
-							<header className="assist-header mb-1">
-								Languages & Tools
-							</header>
-							<div className="d-flex tools d-inline">
-								<ul>
-									{tools.map((tool, index) => (
-										<li
-											key={index}
-											className="d-inline tool"
-										>
-											<img src={tool} alt="tool" />
-										</li>
-									))}
-								</ul>
-							</div>
-						</li>
+					<ul className="socials">
+						<li className="d-block mt-1">Follow Us</li>
+						{socials.map((social, index) => (
+							<li
+								className="d-inline mt-1 pr-1 follow-link"
+								key={index}
+							>
+								<a
+									target="blank"
+									style={{ color: social.color }}
+									href={social.link}
+								>
+									{<social.icon />}
+								</a>
+							</li>
+						))}
 					</ul>
 				</div>
+				<div className="background-space"></div>
 			</div>
 		</section>
 	);

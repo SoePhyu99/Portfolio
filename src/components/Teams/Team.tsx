@@ -1,70 +1,29 @@
 import "./Team.css";
-import { AiFillHtml5 } from "react-icons/ai";
-import logo from "../../assets/images/logo.png";
-import founder from "../../assets/images/founder.jpeg";
-import {
-	BiLogoJava,
-	BiLogoJavascript,
-	BiLogoPhp,
-	BiLogoReact,
-	BiLogoTypescript,
-	BiSolidFileCss,
-} from "react-icons/bi";
-import { FaLaravel } from "react-icons/fa";
+import user from "../../assets/images/user.png";
 const Team = () => {
-	let arr = [1, 2, 3, 4];
+	let arr = [0, 1, 2, 3, 4, 5];
 	return (
 		<section id="team" className="container team text-center">
-			<h2>Meet Our Team</h2>
-			<div className="card founder">
-				<div className="hexagon">
-					<img src={logo} alt="" className="profile-img" />
-				</div>
-				<header className="card-header">Name(Founder)</header>
-				<p className="card-content">Lorem ipsum dolor sit amet.</p>
+			<div className="section-header">
+				<p className="section-header-content color-accent">
+					Unleashing Team Excellence.
+				</p>
+				<header className="section-header-title">Talent Network</header>
 			</div>
-			<div className="member">
-				{arr.map((item, index) => (
-					<div key={index} className="card">
-						<div className="hexagon">
-							<img
-								className="profile-img"
-								src={logo}
-								alt="Team Member"
-							/>
-							<div className="languages d-grid">
-								<div>
-									<AiFillHtml5 />
-								</div>
-								<div>
-									<BiSolidFileCss />
-								</div>
-								<div>
-									<BiLogoJavascript />
-								</div>
-								<div>
-									<BiLogoTypescript />
-								</div>
-								<div>
-									<BiLogoJava />
-								</div>
-								<div>
-									<BiLogoReact />
-								</div>
-								<div>
-									<BiLogoPhp />
-								</div>
-								<div>
-									<FaLaravel />
-								</div>
-							</div>
+			<div className="d-flex flex-wrap space-between cards">
+				{arr.map((a, index) => (
+					<div key={a} className="card m-1 bg-secondary radius">
+						<img src={user} alt="" className="card-img" />
+						<div className={"card-description p-1 text-left"}>
+							<header className="font-sm">
+								{index === 0 ? "Founder" : "Software Developer"}
+							</header>
+							<p className="color-accent">John Smith</p>
+							<p className="member-description mt-1 font-sm">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Quidem, minima?
+							</p>
 						</div>
-						<header className="card-header">
-							Name{item} (Position)
-						</header>
-						<p className="card-content">
-							Lorem ipsum dolor sit amet.
-						</p>
 					</div>
 				))}
 			</div>

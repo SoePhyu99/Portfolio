@@ -1,56 +1,79 @@
 .service{
-    justify-content: space-between;
-}
-.service-info{
-    width: 65%;
+    width: 20rem;
 }
 .service-img{
-    width: 20rem
+    width: 100%;
 }
 .service-content{
-    margin: 1rem 0;
-    padding: 0 0.5rem;
-    border-left: solid var(--color-black) 2px;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
 }
-.service-header{
-    font-size: 1.5rem;
+
+/* DevelopmentPage */
+.development{
+    border: solid var(--color-secondary) 2px;
+    overflow: hidden;
 }
-.service:nth-of-type(even) .service-content{
-    border-left: none;
-    text-align: right;
-    border-right: solid var(--color-black) 2px;
+.stages{
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
 }
-.service:nth-of-type(even) .service-header{
-    text-align: right;
+.stage{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    box-shadow: 1px 1px 5px gray;
 }
-@media screen and (max-width: 1080px) {
-    .service-info{
-        width: 50%;
+
+@media screen and (max-width: 1280px) {
+    .stages {
+        grid-template-columns: repeat(3, 1fr);
     }
-}
-@media screen and (max-width: 700px) {
-    .service{
-        justify-content: center;
+    .services {
+        flex-direction: column;
     }
-    .service-info{
+    .service {
         width: 100%;
+        display: flex;
+        align-items: center;
     }
-    .service:nth-of-type(odd) .service-info{
-        order: 2;
+    .service-info {
+        padding-left: 2rem;
     }
-    .service:nth-of-type(even) .service-content {
-        text-align: left;
-        border-left: solid var(--color-black) 2px;
-        border-right: none;
+    .hide-content {
+        display: block;
     }
-    .service:nth-of-type(even) .service-header {
-        text-align: left;
+    .show-content {
+        display: none;
+    }
+    .service-img {
+        width: 12rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .stages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .service-info{
+        padding-left: 0;
+    }
+    .service-img{
+        display: none;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .service-img {
+    .service{
+        flex-direction: column;
+    }
+    .stage{
         width: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .stages {
+        grid-template-columns: auto;
+    }
+    .service-img{
+        display: block;
+        width: 80%;
     }
 }

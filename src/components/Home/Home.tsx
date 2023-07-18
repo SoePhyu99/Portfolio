@@ -1,22 +1,39 @@
 import "./Home.css";
+import welcomeImage from "../../assets/images/welcome.png";
 
 const Home = () => {
 	return (
-		<section className="container home text-center d-flex">
-			<header className="page-header">Welcome to Varoon Valley</header>
-			<p className="page-content">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-				eius voluptate beatae asperiores, nostrum aliquid error? Ad
-				aliquid provident numquam?
-			</p>
-			<div className="page-actions d-flex">
-				<a href="#contact" className="btn-action d-block">
-					Work With Us
-				</a>
-				<a href="#about" className="btn-action d-block">
-					More
-				</a>
+		<section className="container home d-flex">
+			<div className="home-content">
+				<h3 className="header">Embrace Innovation with</h3>
+				<header className="page-header color-heading">
+					Varoon Valley.
+				</header>
+				<p className="page-content">
+					Welcome to{" "}
+					<span className=" font-l header">Varoon Valley</span>, where
+					innovation meets excellence. We are thrilled to have you
+					join us on our mission to deliver cutting-edge software
+					solutions tailored to your unique needs. Trust us to turn
+					your digital vision into reality and unlock the full
+					potential of your business.
+				</p>
+				<div className="page-actions d-flex flex-wrap">
+					<a
+						href="#contact"
+						className="btn btn-large btn-primary mr-1 d-block"
+					>
+						Work With Us
+					</a>
+					<a
+						href="#about"
+						className="btn btn-large btn-primary d-block"
+					>
+						More
+					</a>
+				</div>
 			</div>
+			<img className="home-img" src={welcomeImage} alt="" />
 		</section>
 	);
 };

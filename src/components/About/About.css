@@ -1,29 +1,35 @@
 .about{
-    background-color: aliceblue;
-}
-.head{
-    font-size: 2rem;
+    margin-top: 3rem;
+    grid-template-areas: 'content content content space space';
+    grid-auto-columns: 1fr;
+    background-image: url('../../assets/images/bg.jpg');
+    background-position: right bottom;
+    background-size: cover;
 }
 .about-content{
-    line-height: 2rem;
+    grid-area: content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    clip-path: polygon(0 0, 84% 0, 100% 100%, 0% 100%);
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+}
+.about-description{
+    padding-right: 1.5rem;
+}
+.follow-link{
+    font-size: 1.5rem;
+}
+.background-space{
+    grid-area: space;
 }
 
-/* about assist */
-.assist-items {
-    font-size: 1.2rem;
-}
-
-.tool img {
-    width: 20px;
-    margin-right: 0.7rem;
-}
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px) {
     .about-content{
-        text-align: center;
+        clip-path: none;
+        width: 100vw;
     }
-    .assist-lists{
-        flex-direction: column;
-        justify-content: center;
+    .about-description{
+        padding-right: 0;
     }
 }

@@ -1,60 +1,71 @@
 import "./Services.css";
-import mobile from "../../assets/images/mobile.png";
-import web from "../../assets/images/web.png";
-import uiux from "../../assets/images/uiux.png";
+import Development from "./DevelopmentPage";
+import { useState } from "react";
+import { developments } from "./Developments";
 
 const Services = () => {
+	const [dev, setDev] = useState(-1);
 	return (
-		<section id="services" className="container services">
-			<h2 className="text-center">Services We Provided</h2>
-			<div className="service d-flex">
-				<div className="pt-2 service-info">
-					<header className="service-header">Web Development</header>
-					<p className="service-content">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Cupiditate at fugiat, maxime saepe nihil, fugit ipsam
-						qui totam quam tempora nam. Obcaecati iure, optio vitae
-						quis consequatur earum minima vero. Lorem ipsum dolor,
-						sit amet consectetur adipisicing elit. Aliquam tenetur
-						soluta eius consequuntur vero voluptatum laborum ipsa
-						quo excepturi quas
+		<>
+			<section id="services" className="container">
+				<div className="section-header text-center">
+					<p className="section-header-content color-accent">
+						Innovative digital services.
 					</p>
-				</div>
-				<img className="service-img" src={web} alt="" />
-			</div>
-			<div className="service d-flex">
-				<img className="service-img" src={mobile} alt="" />
-				<div className="pt-2 service-info">
-					<header className="service-header">
-						Mobile Development
+					<header className="section-header-title">
+						Custom Development
 					</header>
-					<p className="service-content">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Cupiditate at fugiat, maxime saepe nihil, fugit ipsam
-						qui totam quam tempora nam. Obcaecati iure, optio vitae
-						quis consequatur earum minima vero. Lorem ipsum dolor,
-						sit amet consectetur adipisicing elit. Aliquam tenetur
-						soluta eius consequuntur vero voluptatum laborum ipsa
-						quo excepturi quas
-					</p>
 				</div>
-			</div>
-			<div className="service d-flex">
-				<div className="pt-2 service-info">
-					<header className="service-header">UI/UX Design</header>
-					<p className="service-content">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Cupiditate at fugiat, maxime saepe nihil, fugit ipsam
-						qui totam quam tempora nam. Obcaecati iure, optio vitae
-						quis consequatur earum minima vero. Lorem ipsum dolor,
-						sit amet consectetur adipisicing elit. Aliquam tenetur
-						soluta eius consequuntur vero voluptatum laborum ipsa
-						quo excepturi quas
-					</p>
+				<div className="services d-flex mt-1 space-between">
+					{developments.map((development, index) => (
+						<div className="mt-1 mb-1">
+							<div
+								className="service p-1 radius bg-secondary"
+								key={index}
+							>
+								<img
+									className="service-img"
+									src={development.img}
+									alt=""
+								/>
+								<div className="pt-2 service-info text-left">
+									<header className="font-l header">
+										{development.header}
+									</header>
+									<p className="service-content mt-1 mb-1">
+										{development.description.substring(
+											0,
+											140
+										)}
+										...
+									</p>
+									<button
+										onClick={() =>
+											setDev(index === dev ? -1 : index)
+										}
+										className="btn btn-primary"
+									>
+										{dev === index ? "Less" : "More"}
+									</button>
+								</div>
+							</div>
+							{dev === index && (
+								<div className="mt-1 hide-content d-none">
+									<Development
+										development={developments[dev]}
+									/>
+								</div>
+							)}
+						</div>
+					))}
 				</div>
-				<img className="service-img" src={uiux} alt="" />
-			</div>
-		</section>
+				{dev != -1 && (
+					<div className="mt-1 show-content">
+						<Development development={developments[dev]} />
+					</div>
+				)}
+			</section>
+		</>
 	);
 };
 

@@ -1,29 +1,20 @@
+import { socials } from "../Tools/socials";
 import "./Footer.css";
-import {
-	AiOutlineCopyright,
-	AiOutlineGithub,
-	AiOutlineInstagram,
-	AiOutlineLinkedin,
-	AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineCopyright } from "react-icons/ai";
 const Footer = () => {
-	const logos = [
-		<AiOutlineLinkedin />,
-		<AiOutlineInstagram />,
-		<AiOutlineGithub />,
-		<AiOutlineTwitter />,
-	];
 	return (
-		<footer className="footer container">
+		<footer className="footer container bg-primary">
 			<div className="footer-content d-grid">
 				<div className="footer-logo">
 					<a href="#" className="footer-brand">
 						Varoon Valley
 					</a>
 					<ul className="socials">
-						{logos.map((logo, index) => (
+						{socials.map((social, index) => (
 							<li className="d-inline social-link" key={index}>
-								<a href="#">{logo}</a>
+								<a target="blank" href={social.link}>
+									{<social.icon />}
+								</a>
 							</li>
 						))}
 					</ul>
@@ -32,17 +23,17 @@ const Footer = () => {
 					<h4>Quick Link</h4>
 					<ul className="mt-1">
 						<li className="footer-links">
-							<a href="#" className="footer-link">
+							<a href="#home" className="footer-link">
 								Home
 							</a>
 						</li>
 						<li className="footer-links">
-							<a href="#" className="footer-link">
+							<a href="#services" className="footer-link">
 								Services
 							</a>
 						</li>
 						<li className="footer-links">
-							<a href="#" className="footer-link">
+							<a href="#contact" className="footer-link">
 								Contact Us
 							</a>
 						</li>
@@ -52,12 +43,12 @@ const Footer = () => {
 					<h4>Company</h4>
 					<ul className="mt-1">
 						<li className="footer-links">
-							<a href="#" className="footer-link">
+							<a href="#about" className="footer-link">
 								About Us
 							</a>
 						</li>
 						<li className="footer-links">
-							<a href="#" className="footer-link">
+							<a href="#team" className="footer-link">
 								Our Team
 							</a>
 						</li>
@@ -72,7 +63,7 @@ const Footer = () => {
 					<p className="footer-links">+95 912 345 6789</p>
 				</div>
 			</div>
-			<div className="footer-base text-center">
+			<div className="footer-base mt-1 pt-1 text-center">
 				<AiOutlineCopyright />
 				Copyright 2023 | Varoon Valley
 			</div>

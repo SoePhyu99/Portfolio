@@ -1,62 +1,29 @@
 import "./Contact.css";
-import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
-import { AiOutlinePhone } from "react-icons/ai";
+import Form from "./Form";
+import { infos } from "./Info";
 
 const Contact = () => {
-	let infos = [
-		{ icon: <AiOutlinePhone />, name: "Phone", value: "+95 912 345 6789" },
-		{ icon: <HiOutlineMail />, name: "Email", value: "sample@gmail.com" },
-		{
-			icon: <HiOutlineLocationMarker />,
-			name: "Location",
-			value: "Mogoke, Mandalay, Myanmar",
-		},
-	];
 	return (
 		<section id="contact" className="d-grid contact text-center container">
-			<h2 className="header mb-1">Get in Touch</h2>
-			<div className="info space-between mt-1 mb-1 d-flex">
+			<div className="section-header text-center contact-header">
+				<p className="section-header-content color-accent">
+					Connect for Collaboration.
+				</p>
+				<header className="section-header-title">Contact Us</header>
+			</div>
+			<div className="info mt-1 space-between d-flex">
 				{infos.map((info, index) => (
 					<div key={index} className="info-content text-left">
 						<header className="info-content-header">
-							<span className="icon">{info.icon}</span>{" "}
-							<span className="icon-header pl-2">
-								{info.name}
-							</span>
+							<span className="icon">{<info.icon />}</span>{" "}
+							<span className="font-lg pl-2">{info.name}</span>
 						</header>
 						<p className="pl-2">{info.value}</p>
 					</div>
 				))}
 			</div>
 			<div className="form">
-				<header className="form-header mt-1 mb-2">
-					How can we help?
-				</header>
-				<form className="contact-form text-left">
-					<label htmlFor="name">Name</label>
-					<input
-						type="text"
-						className="form-input"
-						placeholder="Your Name"
-						id="name"
-					/>
-					<label htmlFor="email">Email</label>
-					<input
-						className="form-input"
-						type="text"
-						placeholder="Your Email"
-						id="email"
-					/>
-					<label htmlFor="message">Message</label>
-					<textarea
-						name="message"
-						id="message"
-						placeholder="Type Message Here"
-						className="form-input area-input"
-						rows={5}
-					></textarea>
-					<button className="btn-submit">Send</button>
-				</form>
+				<Form />
 			</div>
 			<div className="map">
 				<iframe

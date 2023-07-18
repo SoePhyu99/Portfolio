@@ -3,7 +3,7 @@
     grid-auto-columns: 1fr;
 }
 /* header */
-.header{
+.contact-header{
     grid-area: header;
 }
 
@@ -12,26 +12,20 @@
     grid-area: info;
 }
 .info-content {
-    padding: 1.2rem 0;
+    padding-bottom: 2rem;
 }
-
 .info-content-header {
     padding-bottom: 0.5rem;
 }
-
 .icon {
     font-size: 1.4rem;
     position: absolute;
 }
 
-.icon-header {
-    font-size: 1.1rem;
-}
-
 /* content form */
 .form{
     grid-area: form;
-    border: solid #c7c5c5 1px;
+    border: var(--border-secondary);
     border-right: none;
     padding: 2rem;
 }
@@ -43,27 +37,19 @@
 }
 .form-input{
     width: 100%;
-    margin: 0.5rem 0 1rem;
-    padding: 0.8rem;
-    border: solid #b5b5b5 1px;
+    margin: 0.5rem 0 0;
+    border: var(--border-secondary);
     border-radius: 5px;
     outline: none;
-    font-size: 0.9rem;
 }
 .form-input:focus{
-    border: solid #4b4b4b 1px;
+    border: var(--border-primary);
 }
 .area-input{
     resize: none;
 }
-.btn-submit{
-    padding: 0.7rem 2rem;
-    width: 100%;
-    border: none;
-    background-color: var(--color-black);
-    border-radius: 5px;
-    color: var(--color-white);
-    font-size: 1rem;
+.text-danger{
+    color: red;
 }
 
 /* google map */
