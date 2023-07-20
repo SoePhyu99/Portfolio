@@ -41,6 +41,7 @@ a{
 }
 .bg-secondary{
     background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* btn */

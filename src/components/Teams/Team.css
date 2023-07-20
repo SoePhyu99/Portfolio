@@ -4,10 +4,9 @@
 .card{
     width: 18rem;
     overflow: hidden;
-    box-shadow: 1px 1px 5px var(--color-secondary);
 }
 .card-img{
-    width: 80%;
+    width: 100%;
 }
 .card-description{
     color: var(--color-black);
