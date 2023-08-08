@@ -23,8 +23,11 @@ const Services = () => {
 				</div>
 				<div className="services d-flex mt-1 space-between">
 					{developments.map((development, index) => (
-						<div className="mt-1 mb-1 service-container radius bg-secondary">
-							<div className="service p-1" key={index}>
+						<div className="mt-1 mb-1 service-container radius">
+							<div
+								className="service p-1 bg-secondary"
+								key={index}
+							>
 								<Lottie
 									className="service-img"
 									animationData={img[index]}
