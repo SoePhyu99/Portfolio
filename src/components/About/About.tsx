@@ -9,7 +9,7 @@ const About = () => {
 						<p className="section-header-content color-secondary">
 							Empowering Digital Success.
 						</p>
-						<header className="section-header-title color-heading">
+						<header className="section-header-title color-accent">
 							About Us
 						</header>
 					</div>

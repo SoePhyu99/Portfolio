@@ -1,3 +1,13 @@
+.services{
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.service-container:first-child .service-img{
+    padding: 1.7rem 0;
+}
+.service-container{
+    align-self: stretch;
+}
 .service{
     width: 20rem;
 }

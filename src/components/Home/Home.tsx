@@ -1,6 +1,6 @@
 import "./Home.css";
 import Lottie from "lottie-react";
-import groovyWalkAnimation from "../../assets/animation_ll1z121i.json";
+import WelcomeImg from "../../assets/images/svg/welcome-animated.json";
 
 const Home = () => {
 	return (
@@ -35,7 +35,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="home-img">
-				<Lottie animationData={groovyWalkAnimation} loop={true} />
+				<Lottie animationData={WelcomeImg} loop={true} />
 			</div>
 		</section>
 	);

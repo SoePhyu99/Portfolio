@@ -9,7 +9,7 @@
     --color-primary: #3c4142;
     --color-secondary: #ececec;
     --color-accent: #5c5c5c;
-    --color-heading: #f3b33f;
+    --color-heading: #000;
     --transition: all ease 0.3s;
 }
 * {
@@ -58,6 +58,11 @@ a{
 .btn-primary {
     background-color: var(--color-primary);
     color: #fff;
+}
+
+.btn-heading {
+    background-color: var(--color-heading);
+    color: var(--color-primary);
 }
 
 .btn:disabled {

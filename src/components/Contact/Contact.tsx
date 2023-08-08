@@ -6,10 +6,12 @@ const Contact = () => {
 	return (
 		<section id="contact" className="d-grid contact text-center container">
 			<div className="section-header text-center contact-header">
-				<p className="section-header-content color-accent">
+				<p className="section-header-content color-primary">
 					Connect for Collaboration.
 				</p>
-				<header className="section-header-title">Contact Us</header>
+				<header className="section-header-title color-heading">
+					Contact Us
+				</header>
 			</div>
 			<div className="info mt-1 space-between d-flex">
 				{infos.map((info, index) => (

@@ -2,34 +2,36 @@ import "./Services.css";
 import Development from "./DevelopmentPage";
 import { useState } from "react";
 import { developments } from "./Developments";
+import Lottie from "lottie-react";
+import mobile from "../../assets/images/svg/mobile-dev-animated.json";
+import web from "../../assets/images/svg/web-dev-animated.json";
+import uiux from "../../assets/images/svg/uiux-animated.json";
 
 const Services = () => {
 	const [dev, setDev] = useState(-1);
+	const img = [web, mobile, uiux];
 	return (
 		<>
 			<section id="services" className="container">
 				<div className="section-header text-center">
-					<p className="section-header-content color-accent">
+					<p className="section-header-content color-primary">
 						Innovative digital services.
 					</p>
-					<header className="section-header-title">
+					<header className="section-header-title color-heading">
 						Custom Development
 					</header>
 				</div>
 				<div className="services d-flex mt-1 space-between">
 					{developments.map((development, index) => (
-						<div className="mt-1 mb-1">
-							<div
-								className="service p-1 radius bg-secondary"
-								key={index}
-							>
-								<img
+						<div className="mt-1 mb-1 service-container radius bg-secondary">
+							<div className="service p-1" key={index}>
+								<Lottie
 									className="service-img"
-									src={development.img}
-									alt=""
+									animationData={img[index]}
+									loop={true}
 								/>
 								<div className="pt-2 service-info text-left">
-									<header className="font-l header">
+									<header className="font-l header color-accent">
 										{development.header}
 									</header>
 									<p className="service-content mt-1 mb-1">
