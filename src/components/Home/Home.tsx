@@ -1,9 +1,11 @@
 import "./Home.css";
 import welcomeImage from "../../assets/images/welcome.png";
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../../assets/animation_ll1z121i.json";
 
 const Home = () => {
 	return (
-		<section className="container home d-flex">
+		<section className="container home d-grid">
 			<div className="home-content">
 				<h3 className="header">Embrace Innovation with</h3>
 				<header className="page-header color-heading">
@@ -33,7 +35,10 @@ const Home = () => {
 					</a>
 				</div>
 			</div>
-			<img className="home-img" src={welcomeImage} alt="" />
+			<div className="home-img">
+				<Lottie animationData={groovyWalkAnimation} loop={true} />
+			</div>
+			{/* <img className="home-img" src={welcomeImage} alt="" /> */}
 		</section>
 	);
 };
