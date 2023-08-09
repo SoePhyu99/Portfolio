@@ -48,7 +48,7 @@ const Services = () => {
 										onClick={() =>
 											setDev(index === dev ? -1 : index)
 										}
-										className="btn btn-primary"
+										className="btn btn-heading"
 									>
 										{dev === index ? "Less" : "More"}
 									</button>
